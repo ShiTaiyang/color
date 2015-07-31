@@ -1,0 +1,30 @@
+parameters:
+	target x,y
+	gamma (0.0 - 4.0)
+	input files
+
+(look up argparse as a way to handle command line parameters)
+
+default:
+	x = 0.3
+	y = 0.3
+	gamma = 2.0
+	f_r = mod.r.pl
+	f_g = mod.g.pl
+	f_b = mod.b.pl
+
+data file format:
+modcode X Y Z #but actually R G B
+treat '#' as a comment
+
+- map to gamma of 2.0
+	select 256 points from each color graph to fit gamma
+- plot data about X,Y,Z and x,y for: r, g, b, W
+
+
+
+I can do
+T -> x,y (1931 cie)
+
+I can't do
+x,y -> T,duv
