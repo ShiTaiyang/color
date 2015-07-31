@@ -44,14 +44,13 @@ nd = [(x-sdmin)/(sdmax-sdmin) for x in sd]
 
 gamma = 2.0
 ga=[]
+y=[]
 
 for j in range(0,len(nd)):
     ga.append((j/len(nd))**gamma)
+    y.append(j/len(nd))
 
-print(ga)
-print(len(ga))
-
-mpl.plot(nd,ga)
+mpl.plot(nd,ga,y,y,'r--')
 mpl.show()
 
 
